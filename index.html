@@ -7,16 +7,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>
-    Fantasy Football 2023/24
-    </h1>
-    <ul class='navbar' id='menu'>
+  <nav>
+    <div class='headerWrapper'>
+      <h1>
+        Fantasy Football 2023/24
+      </h1>
+      <button id='nav-expand-button'>
+        <span class='visually-hidden'>Menu</span>
+        <svg id="menuIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-roledescription="Menu Icon">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g data-name="Layer 2">
+              <g data-name="menu">
+                <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
+                <rect x="3" y="11" width="18" height="2" rx=".95" ry=".95"></rect>
+                <rect x="3" y="16" width="18" height="2" rx=".95" ry=".95"></rect>
+                <rect x="3" y="6" width="18" height="2" rx=".95" ry=".95"></rect>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+      <nav id='mainNav' aria-roledescription='Main Navigation' aria-expanded='false'></nav>
+    <ul>
       <li><a href="./" title='Homepage'>Home</a></li>
       <li><a href="teams.html" title='Teams'>Teams</a></li>
       <li><a href="players.html" title='Players'>Players</a></li>
       <li><a href="table.html" title='Table'>Table</a></li>
     </ul>
+  </nav>
   </header>
   <main>
     <article>
@@ -30,37 +51,24 @@
     <h2>
       Create your team
     </h2>
-    <form action="" method='get' class='selection-form'>
-      <label for="gk-select">
-        Choose a Goalkeeper:
-      </label>
-      <select name="goalies" id='gk-select'>
-        <option value="">
+    <form name='"form1' id='form1' action="/action_page.php">
+      Teams: <select name="teams" id='teams'>
+        <option value="" selected='selected'>
           --Please choose an option--
         </option>
-        <option value="arsenal">Arsenal</option>
-        <option value="villa">Aston Villa</option>
-        <option value="bournemouth">Bournemouth</option>
-        <option value="brentford">Brentford</option>
-        <option value="brighton">Brighton & Hove Albion</option>
-        <option value="burnley">Burnley</option>
-        <option value="chelsea">Chelsea</option>
-        <option value="palace">Crystal Palace</option>
-        <option value="everton">Everton</option>
-        <option value="fulham">Fulham</option>
-        <option value="liverpool">Liverpool</option>
-        <option value="luton">Luton Town</option>
-        <option value="mancity">Manchester City</option>
-        <option value="manutd">Manchester United</option>
-        <option value="newcastle">Newcastle United</option>
-        <option value="forest">Nottingham Forest</option>
-        <option value="sheffutd">Sheffield United</option>
-        <option value="spurs">Tottenham Hotspur</option>
-        <option value="westham">West Ham United</option>
-        <option value="wolves">Wolverhampton Wanderers</option>
+        </select>
+      <br><br>
+      Position: <select name="position" id="position">
+        <option value="" selected="selected">Please select team first</option>
       </select>
+      <br><br>
+      Player: <select name='player' id='player'>
+        <option value='' selected='selected'>Please select position first</option>
+      </select>
+      <br><br>
       <button type='button' form='gk-select'>Select</button>
     </form>
   </main>
+  <script src='app.js'></script>
 </body>
 </html>
