@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fantasy Football 23-24</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<div>
-  <nav>
-    < class='headerWrapper'>
+
+<body>
+  <header>
+    <nav>
       <h1>
         Fantasy Football 2023/24
       </h1>
-      <button id='nav-expand-button'>
-        <span class='visually-hidden'>Menu</span>
-        <svg id="menuIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-roledescription="Menu Icon">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <g data-name="Layer 2">
-              <g data-name="menu">
-                <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
-                <rect x="3" y="11" width="18" height="2" rx=".95" ry=".95"></rect>
-                <rect x="3" y="16" width="18" height="2" rx=".95" ry=".95"></rect>
-                <rect x="3" y="6" width="18" height="2" rx=".95" ry=".95"></rect>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </button>
-    
-    <div class='container'>
-
-      <nav id='mainNav' aria-roledescription='Main Navigation' aria-expanded='false'></nav>
-        <ul>
-          <li><a href="./" title='Homepage'>Home</a></li>
-          <li><a href="teams.html" title='Teams'>Teams</a></li>
-          <li><a href="players.html" title='Players'>Players</a></li>
-          <li><a href="table.html" title='Table'>Table</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+      <div class='dropdown'>
+        <button class='dropbtn'>Menu</button>
+        <div class='dropdown-content'>
+          <ul>
+            <li><a href="./" title='Homepage'>Home</a></li>
+            <li><a href="teams.html" title='Teams'>Teams</a></li>
+            <li><a href="players.html" title='Players'>Players</a></li>
+            <li><a href="table.html" title='Table'>Table</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
+
   <main>
     <article>
       <p>
@@ -60,7 +45,7 @@
         <option value="" selected='selected'>
           --Please choose an option--
         </option>
-        </select>
+      </select>
       <br><br>
       Position: <select name="position" id="position">
         <option value="" selected="selected">Please select team first</option>
@@ -75,4 +60,5 @@
   </main>
   <script src='app.js'></script>
 </body>
+
 </html>
