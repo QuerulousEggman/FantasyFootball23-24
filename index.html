@@ -40,7 +40,7 @@
     <h2>
       Create your team
     </h2>
-    <form name='"form1' id='form1' action="/action_page.php">
+    <form name='form1' id='form1' onsubmit='myfunc()'>
       Teams: <select name="teams" id='teams'>
         <option value="" selected='selected'>
           --Please choose an option--
@@ -55,8 +55,20 @@
         <option value='' selected='selected'>Please select position first</option>
       </select>
       <br><br>
-      <button type='button' form='gk-select'>Select</button>
+      <input type='submit' name='Select' onclick='showInput();'><br/>
     </form>
+    <table>
+      <tr>
+        <th>Position</th>
+        <th>Player Name</th>
+        <th>Club</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
   </main>
   <script src='app.js'></script>
 </body>
