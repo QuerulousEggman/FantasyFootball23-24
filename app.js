@@ -47,8 +47,3 @@ window.onload = function() {
 // };
 // navExpandButton.addEventListener('click', handleClick)
 
-function showInput() {
-  document.getElementById("position").value;
-  document.getElementById("player").value;
-  document.getElementById("teams").value;
-}

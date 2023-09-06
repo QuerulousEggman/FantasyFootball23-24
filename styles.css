@@ -85,3 +85,14 @@ nav a:hover::before {
 .active .collapsible:hover {
   background-color: #ccc;
 }
+
+table, th, td {
+  border: 1px solid green;
+  border-collapse: collapse;
+  font-size: 18px;
+  padding: 10px;
+}
+
+th {
+  width: 20%;
+}

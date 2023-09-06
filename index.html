@@ -40,7 +40,7 @@
     <h2>
       Create your team
     </h2>
-    <form name='form1' id='form1' onsubmit='myfunc()'>
+    <form name='form1' id='form1'>
       Teams: <select name="teams" id='teams'>
         <option value="" selected='selected'>
           --Please choose an option--
@@ -55,22 +55,20 @@
         <option value='' selected='selected'>Please select position first</option>
       </select>
       <br><br>
-      <input type='submit' name='Select' onclick='showInput();'><br/>
+      <span id='error'></span>
+      <button onclick='publishToTable()'>Submit</button><br><br>
     </form>
     <table>
-      <tr>
-        <th>Position</th>
-        <th>Player Name</th>
-        <th>Club</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Player Name</th>
+          <th>Club</th>
+        </tr>
+      </thead>
     </table>
   </main>
-  <script src='app.js'></script>
+  <script src='app.js' defer></script>
 </body>
 
 </html>
